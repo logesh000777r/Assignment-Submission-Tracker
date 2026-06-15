@@ -1,0 +1,119 @@
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --muted:#6c757d;
+  --accent:#4b7bec;
+}
+
+body {
+  background: linear-gradient(180deg, var(--bg) 0%, #eef3fb 100%);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-root {
+  max-width: 1100px;
+}
+
+/* Brand */
+.app-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.2px;
+}
+
+/* Summary chip */
+.summary-chip {
+  background: rgba(75,124,236,0.12);
+  color: var(--accent);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Dashboard cards */
+.dashboard-card {
+  padding: 18px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(29,40,61,0.06);
+}
+.dashboard-card h6 {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  opacity: 0.95;
+}
+.dashboard-card h2 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+.submitted { background: linear-gradient(135deg,#28a745,#2fd36d); }
+.pending   { background: linear-gradient(135deg,#ffbf36,#ffc107); color: #1f1f1f; }
+.late      { background: linear-gradient(135deg,#ff6b6b,#dc3545); }
+
+.status-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* Card for form */
+.form-card {
+  background: var(--card);
+  border: none;
+  box-shadow: 0 8px 30px rgba(29,40,61,0.06);
+  border-radius: 12px;
+}
+
+/* Table */
+.table-responsive {
+  background: transparent;
+}
+
+.table {
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-head {
+  background: rgba(16,24,40,0.85);
+  color: #fff;
+  border: none;
+}
+.table thead th {
+  border: none;
+  vertical-align: middle;
+}
+.table tbody tr {
+  background: #fff;
+}
+.table tbody tr + tr td {
+  border-top: 1px solid #f1f3f6;
+}
+.table td, .table th {
+  padding: 16px;
+  vertical-align: middle;
+}
+
+/* status select variants */
+.status-select.pending { background: rgba(255,193,7,0.06); }
+.status-select.submitted { background: rgba(40,167,69,0.06); }
+.status-select.late { background: rgba(220,53,69,0.06); }
+
+/* small UI touches */
+.input-group .input-group-text { border-right: 0; }
+.input-group .form-control { border-left: 0; }
+.btn-primary { background: linear-gradient(180deg,#3b82f6,#2b6ef6); border: none; }
+.btn-outline-danger { border-radius: 8px; }
+
+.table td .fw-semibold { font-weight: 600; }
+
+/* responsive */
+@media (max-width: 768px) {
+  .dashboard-card h2 { font-size: 1.3rem; }
+  .brand { gap: 12px; }
+}
